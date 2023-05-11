@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.1 (Python 3.11.3 on win32)" generated="20230511 05:17:05.925" rpa="false" schemaversion="3">
+<suite id="s1" name="TS06" source="C:\Users\BeiBA\PycharmProjects\pythonProject8\TS06\TS06.robot">
+<test id="s1-t1" name="Search function Ability with wrong Data" line="10">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<arg>edge</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230511 05:17:06.218" level="INFO">Opening browser 'edge' to base url 'https://meta.wikimedia.org/wiki/Help:Page_history'.</msg>
+<status status="PASS" starttime="20230511 05:17:06.218" endtime="20230511 05:17:19.546"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${Button_Search}</arg>
+<arg>${Result3}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230511 05:17:19.548" level="INFO">Typing text '(//DIV)[74]' into text field '//INPUT[@id='searchInput']'.</msg>
+<status status="PASS" starttime="20230511 05:17:19.546" endtime="20230511 05:17:19.753"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Button_Search1}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230511 05:17:19.753" level="INFO">Clicking element '//INPUT[@id='searchButton']'.</msg>
+<status status="PASS" starttime="20230511 05:17:19.753" endtime="20230511 05:17:23.947"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Result4}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230511 05:17:23.948" endtime="20230511 05:17:24.147"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20230511 05:17:24.147" level="INFO">Opening url 'https://meta.wikimedia.org/wiki/Help:Page_history'</msg>
+<status status="PASS" starttime="20230511 05:17:24.147" endtime="20230511 05:17:25.236"/>
+</kw>
+<status status="PASS" starttime="20230511 05:17:06.218" endtime="20230511 05:17:25.237"/>
+</test>
+<test id="s1-t2" name="Search function Ability with Correct Data without clicking button" line="17">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${Button_Search}</arg>
+<arg>Complete list of Wikimedia projects</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230511 05:17:25.240" level="INFO">Typing text 'Complete list of Wikimedia projects' into text field '//INPUT[@id='searchInput']'.</msg>
+<status status="PASS" starttime="20230511 05:17:25.240" endtime="20230511 05:17:25.488"/>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20230511 05:17:25.498" level="INFO">Current location is 'https://meta.wikimedia.org/wiki/Help:Page_history'.</msg>
+<status status="PASS" starttime="20230511 05:17:25.488" endtime="20230511 05:17:25.498"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20230511 05:17:25.498" level="INFO">Opening url 'https://meta.wikimedia.org/wiki/Help:Page_history'</msg>
+<status status="PASS" starttime="20230511 05:17:25.498" endtime="20230511 05:17:25.822"/>
+</kw>
+<status status="PASS" starttime="20230511 05:17:25.238" endtime="20230511 05:17:25.822"/>
+</test>
+<test id="s1-t3" name="Search function Ability with Correct Data with clicking button" line="21">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${Button_Search}</arg>
+<arg>Complete list of Wikimedia projects</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230511 05:17:25.825" level="INFO">Typing text 'Complete list of Wikimedia projects' into text field '//INPUT[@id='searchInput']'.</msg>
+<status status="PASS" starttime="20230511 05:17:25.824" endtime="20230511 05:17:26.129"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Button_Search1}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230511 05:17:26.130" level="INFO">Clicking element '//INPUT[@id='searchButton']'.</msg>
+<status status="PASS" starttime="20230511 05:17:26.130" endtime="20230511 05:17:26.671"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Result6}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230511 05:17:26.673" endtime="20230511 05:17:27.379"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20230511 05:17:27.379" level="INFO">Opening url 'https://meta.wikimedia.org/wiki/Help:Page_history'</msg>
+<status status="PASS" starttime="20230511 05:17:27.379" endtime="20230511 05:17:27.555"/>
+</kw>
+<status status="PASS" starttime="20230511 05:17:25.824" endtime="20230511 05:17:27.556"/>
+</test>
+<test id="s1-t4" name="Search function Ability with just Numbers Data with clicking button" line="26">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${Button_Search}</arg>
+<arg>1236</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230511 05:17:27.559" level="INFO">Typing text '1236' into text field '//INPUT[@id='searchInput']'.</msg>
+<status status="PASS" starttime="20230511 05:17:27.558" endtime="20230511 05:17:27.768"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Button_Search1}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230511 05:17:27.768" level="INFO">Clicking element '//INPUT[@id='searchButton']'.</msg>
+<status status="PASS" starttime="20230511 05:17:27.768" endtime="20230511 05:17:28.707"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Result7}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230511 05:17:28.707" endtime="20230511 05:17:28.828"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20230511 05:17:28.829" level="INFO">Opening url 'https://meta.wikimedia.org/wiki/Help:Page_history'</msg>
+<status status="PASS" starttime="20230511 05:17:28.828" endtime="20230511 05:17:29.334"/>
+</kw>
+<status status="PASS" starttime="20230511 05:17:27.557" endtime="20230511 05:17:29.334"/>
+</test>
+<test id="s1-t5" name="Search function Ability with just Name with clicking button" line="31">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${Button_Search}</arg>
+<arg>Beibarys</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230511 05:17:29.337" level="INFO">Typing text 'Beibarys' into text field '//INPUT[@id='searchInput']'.</msg>
+<status status="PASS" starttime="20230511 05:17:29.336" endtime="20230511 05:17:29.561"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Button_Search1}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230511 05:17:29.562" level="INFO">Clicking element '//INPUT[@id='searchButton']'.</msg>
+<status status="PASS" starttime="20230511 05:17:29.561" endtime="20230511 05:17:30.688"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Result8}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230511 05:17:30.689" endtime="20230511 05:17:30.801"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20230511 05:17:30.802" level="INFO">Opening url 'https://meta.wikimedia.org/wiki/Help:Page_history'</msg>
+<status status="PASS" starttime="20230511 05:17:30.801" endtime="20230511 05:17:31.542"/>
+</kw>
+<status status="PASS" starttime="20230511 05:17:29.336" endtime="20230511 05:17:31.543"/>
+</test>
+<test id="s1-t6" name="Post-conditions" line="36">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230511 05:17:31.545" endtime="20230511 05:17:38.139"/>
+</kw>
+<status status="PASS" starttime="20230511 05:17:31.544" endtime="20230511 05:17:38.139"/>
+</test>
+<status status="PASS" starttime="20230511 05:17:05.928" endtime="20230511 05:17:38.143"/>
+</suite>
+<statistics>
+<total>
+<stat pass="6" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="6" fail="0" skip="0" id="s1" name="TS06">TS06</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20230511 05:17:06.208" level="ERROR">Error in file 'C:\Users\BeiBA\PycharmProjects\pythonProject8\TS06\TS06.robot' on line 4: Resource file 'Values.robot' does not exist.</msg>
+</errors>
+</robot>

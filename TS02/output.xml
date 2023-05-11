@@ -1,0 +1,519 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.1 (Python 3.11.3 on win32)" generated="20230510 23:25:40.060" rpa="false" schemaversion="3">
+<suite id="s1" name="TS02" source="C:\Users\BeiBA\PycharmProjects\pythonProject8\TS02\TS02.robot">
+<test id="s1-t1" name="Create Account With everything Correct" line="9">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<arg>edge</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230510 23:25:40.398" level="INFO">Opening browser 'edge' to base url 'https://rosettacode.org/w/index.php?title=Special:CreateAccount&amp;returnto=Rosetta+Code'.</msg>
+<status status="PASS" starttime="20230510 23:25:40.397" endtime="20230510 23:25:45.630"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${Button_Username}</arg>
+<arg>${name1}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230510 23:25:45.634" level="INFO">Typing text 'Jogdfgdfgdfhn' into text field '//INPUT[@id='wpName2']'.</msg>
+<status status="PASS" starttime="20230510 23:25:45.633" endtime="20230510 23:25:45.832"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${Button_Password}</arg>
+<arg>${password1}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230510 23:25:45.835" level="INFO">Typing text 'password12324' into text field '//INPUT[@id='wpPassword2']'.</msg>
+<status status="PASS" starttime="20230510 23:25:45.834" endtime="20230510 23:25:45.972"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${Button_Password2}</arg>
+<arg>${password1}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230510 23:25:45.975" level="INFO">Typing text 'password12324' into text field '//INPUT[@id='wpRetype']'.</msg>
+<status status="PASS" starttime="20230510 23:25:45.973" endtime="20230510 23:25:46.160"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${Button_email}</arg>
+<arg>${email1}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230510 23:25:46.161" level="INFO">Typing text 'john@example.com' into text field '//INPUT[@id='wpEmail']'.</msg>
+<status status="PASS" starttime="20230510 23:25:46.160" endtime="20230510 23:25:46.280"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${Button_RealName}</arg>
+<arg>${name1}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230510 23:25:46.281" level="INFO">Typing text 'Jogdfgdfgdfhn' into text field '//INPUT[@id='wpRealName']'.</msg>
+<status status="PASS" starttime="20230510 23:25:46.280" endtime="20230510 23:25:46.453"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>window.scrollTo(0, document.body.scrollHeight);</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20230510 23:25:46.454" level="INFO">Executing JavaScript:
+window.scrollTo(0, document.body.scrollHeight);
+Without any arguments.</msg>
+<status status="PASS" starttime="20230510 23:25:46.453" endtime="20230510 23:25:46.466"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${Button_CreateAcc}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230510 23:25:46.467" level="INFO">Clicking button '//button[@id='wpCreateaccount']'.</msg>
+<status status="PASS" starttime="20230510 23:25:46.467" endtime="20230510 23:25:49.479"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230510 23:25:52.481" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230510 23:25:49.480" endtime="20230510 23:25:52.481"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//DIV[@class='mw-message-box-error mw-message-box'][text()='There are problems with some of your input.']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230510 23:25:52.481" endtime="20230510 23:25:52.521"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20230510 23:25:52.522" level="INFO">Opening url 'https://rosettacode.org/w/index.php?title=Special:CreateAccount&amp;returnto=Rosetta+Code'</msg>
+<status status="PASS" starttime="20230510 23:25:52.521" endtime="20230510 23:25:53.230"/>
+</kw>
+<status status="PASS" starttime="20230510 23:25:40.395" endtime="20230510 23:25:53.231"/>
+</test>
+<test id="s1-t2" name="Create Account With wrong Username" line="22">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<arg>edge</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230510 23:25:53.234" level="INFO">Using existing browser from index 1.</msg>
+<msg timestamp="20230510 23:25:53.234" level="INFO">Opening url 'https://rosettacode.org/w/index.php?title=Special:CreateAccount&amp;returnto=Rosetta+Code'</msg>
+<status status="PASS" starttime="20230510 23:25:53.233" endtime="20230510 23:25:53.914"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${Button_Username}</arg>
+<arg>${email1}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230510 23:25:53.916" level="INFO">Typing text 'john@example.com' into text field '//INPUT[@id='wpName2']'.</msg>
+<status status="PASS" starttime="20230510 23:25:53.915" endtime="20230510 23:25:54.079"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${Button_Password}</arg>
+<arg>${password2}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230510 23:25:54.080" level="INFO">Typing text 'WuB.dZV-9hbzyBd' into text field '//INPUT[@id='wpPassword2']'.</msg>
+<status status="PASS" starttime="20230510 23:25:54.079" endtime="20230510 23:25:54.241"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${Button_Password2}</arg>
+<arg>${password2}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230510 23:25:54.242" level="INFO">Typing text 'WuB.dZV-9hbzyBd' into text field '//INPUT[@id='wpRetype']'.</msg>
+<status status="PASS" starttime="20230510 23:25:54.242" endtime="20230510 23:25:54.424"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${Button_email}</arg>
+<arg>${email2}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230510 23:25:54.426" level="INFO">Typing text 'jane@example.com' into text field '//INPUT[@id='wpEmail']'.</msg>
+<status status="PASS" starttime="20230510 23:25:54.425" endtime="20230510 23:25:54.579"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${Button_RealName}</arg>
+<arg>${name2}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230510 23:25:54.580" level="INFO">Typing text 'Jane' into text field '//INPUT[@id='wpRealName']'.</msg>
+<status status="PASS" starttime="20230510 23:25:54.579" endtime="20230510 23:25:54.697"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>window.scrollTo(0, document.body.scrollHeight);</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20230510 23:25:54.699" level="INFO">Executing JavaScript:
+window.scrollTo(0, document.body.scrollHeight);
+Without any arguments.</msg>
+<status status="PASS" starttime="20230510 23:25:54.698" endtime="20230510 23:25:54.708"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${Button_CreateAcc}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230510 23:25:54.709" level="INFO">Clicking button '//button[@id='wpCreateaccount']'.</msg>
+<status status="PASS" starttime="20230510 23:25:54.709" endtime="20230510 23:25:58.177"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230510 23:26:01.178" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230510 23:25:58.177" endtime="20230510 23:26:01.178"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//DIV[@class='mw-message-box-error mw-message-box'][text()='This value is required.']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230510 23:26:01.179" endtime="20230510 23:26:01.207"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20230510 23:26:01.208" level="INFO">Opening url 'https://rosettacode.org/w/index.php?title=Special:CreateAccount&amp;returnto=Rosetta+Code'</msg>
+<status status="PASS" starttime="20230510 23:26:01.208" endtime="20230510 23:26:01.938"/>
+</kw>
+<status status="PASS" starttime="20230510 23:25:53.232" endtime="20230510 23:26:01.938"/>
+</test>
+<test id="s1-t3" name="Create Account With wrong Password" line="35">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<arg>edge</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230510 23:26:01.942" level="INFO">Using existing browser from index 1.</msg>
+<msg timestamp="20230510 23:26:01.942" level="INFO">Opening url 'https://rosettacode.org/w/index.php?title=Special:CreateAccount&amp;returnto=Rosetta+Code'</msg>
+<status status="PASS" starttime="20230510 23:26:01.941" endtime="20230510 23:26:02.506"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${Button_Username}</arg>
+<arg>${name1}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230510 23:26:02.508" level="INFO">Typing text 'Jogdfgdfgdfhn' into text field '//INPUT[@id='wpName2']'.</msg>
+<status status="PASS" starttime="20230510 23:26:02.508" endtime="20230510 23:26:02.635"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${Button_Password}</arg>
+<arg>${password2}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230510 23:26:02.636" level="INFO">Typing text 'WuB.dZV-9hbzyBd' into text field '//INPUT[@id='wpPassword2']'.</msg>
+<status status="PASS" starttime="20230510 23:26:02.635" endtime="20230510 23:26:02.812"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${Button_Password2}</arg>
+<arg>${password3}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230510 23:26:02.814" level="INFO">Typing text '123' into text field '//INPUT[@id='wpRetype']'.</msg>
+<status status="PASS" starttime="20230510 23:26:02.813" endtime="20230510 23:26:02.922"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${Button_email}</arg>
+<arg>${email2}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230510 23:26:02.923" level="INFO">Typing text 'jane@example.com' into text field '//INPUT[@id='wpEmail']'.</msg>
+<status status="PASS" starttime="20230510 23:26:02.922" endtime="20230510 23:26:03.069"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${Button_RealName}</arg>
+<arg>${name2}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230510 23:26:03.070" level="INFO">Typing text 'Jane' into text field '//INPUT[@id='wpRealName']'.</msg>
+<status status="PASS" starttime="20230510 23:26:03.070" endtime="20230510 23:26:03.185"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>window.scrollTo(0, document.body.scrollHeight);</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20230510 23:26:03.191" level="INFO">Executing JavaScript:
+window.scrollTo(0, document.body.scrollHeight);
+Without any arguments.</msg>
+<status status="PASS" starttime="20230510 23:26:03.187" endtime="20230510 23:26:03.203"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${Button_CreateAcc}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230510 23:26:03.204" level="INFO">Clicking button '//button[@id='wpCreateaccount']'.</msg>
+<status status="PASS" starttime="20230510 23:26:03.204" endtime="20230510 23:26:04.717"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230510 23:26:07.719" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230510 23:26:04.718" endtime="20230510 23:26:07.719"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//DIV[@class='mw-message-box-error mw-message-box'][text()='The passwords you entered do not match.']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230510 23:26:07.720" endtime="20230510 23:26:07.745"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20230510 23:26:07.746" level="INFO">Opening url 'https://rosettacode.org/w/index.php?title=Special:CreateAccount&amp;returnto=Rosetta+Code'</msg>
+<status status="PASS" starttime="20230510 23:26:07.746" endtime="20230510 23:26:08.487"/>
+</kw>
+<status status="PASS" starttime="20230510 23:26:01.940" endtime="20230510 23:26:08.491"/>
+</test>
+<test id="s1-t4" name="Create Account With wrong Username Without clicking On create Button" line="47">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<arg>edge</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230510 23:26:08.496" level="INFO">Using existing browser from index 1.</msg>
+<msg timestamp="20230510 23:26:08.496" level="INFO">Opening url 'https://rosettacode.org/w/index.php?title=Special:CreateAccount&amp;returnto=Rosetta+Code'</msg>
+<status status="PASS" starttime="20230510 23:26:08.495" endtime="20230510 23:26:13.097"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${Button_Username}</arg>
+<arg>${name3}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230510 23:26:13.098" level="INFO">Typing text 'qwqsqwsqs' into text field '//INPUT[@id='wpName2']'.</msg>
+<status status="PASS" starttime="20230510 23:26:13.098" endtime="20230510 23:26:13.231"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${Button_Password}</arg>
+<arg>${password1}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230510 23:26:13.232" level="INFO">Typing text 'password12324' into text field '//INPUT[@id='wpPassword2']'.</msg>
+<status status="PASS" starttime="20230510 23:26:13.231" endtime="20230510 23:26:13.368"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${Button_Password2}</arg>
+<arg>${password1}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230510 23:26:13.372" level="INFO">Typing text 'password12324' into text field '//INPUT[@id='wpRetype']'.</msg>
+<status status="PASS" starttime="20230510 23:26:13.371" endtime="20230510 23:26:13.510"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${Button_email}</arg>
+<arg>${email1}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230510 23:26:13.510" level="INFO">Typing text 'john@example.com' into text field '//INPUT[@id='wpEmail']'.</msg>
+<status status="PASS" starttime="20230510 23:26:13.510" endtime="20230510 23:26:13.644"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${Button_RealName}</arg>
+<arg>${name1}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230510 23:26:13.645" level="INFO">Typing text 'Jogdfgdfgdfhn' into text field '//INPUT[@id='wpRealName']'.</msg>
+<status status="PASS" starttime="20230510 23:26:13.644" endtime="20230510 23:26:13.806"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230510 23:26:16.809" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230510 23:26:13.809" endtime="20230510 23:26:16.809"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//DIV[@class='mw-message-box mw-message-box-warning']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230510 23:26:16.809" endtime="20230510 23:26:16.841"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20230510 23:26:16.842" level="INFO">Opening url 'https://rosettacode.org/w/index.php?title=Special:CreateAccount&amp;returnto=Rosetta+Code'</msg>
+<status status="PASS" starttime="20230510 23:26:16.841" endtime="20230510 23:26:17.655"/>
+</kw>
+<status status="PASS" starttime="20230510 23:26:08.493" endtime="20230510 23:26:17.655"/>
+</test>
+<test id="s1-t5" name="Create Account With wrong Password Without clicking On create Button" line="58">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<arg>edge</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230510 23:26:17.658" level="INFO">Using existing browser from index 1.</msg>
+<msg timestamp="20230510 23:26:17.658" level="INFO">Opening url 'https://rosettacode.org/w/index.php?title=Special:CreateAccount&amp;returnto=Rosetta+Code'</msg>
+<status status="PASS" starttime="20230510 23:26:17.657" endtime="20230510 23:26:18.245"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${Button_Username}</arg>
+<arg>${name1}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230510 23:26:18.246" level="INFO">Typing text 'Jogdfgdfgdfhn' into text field '//INPUT[@id='wpName2']'.</msg>
+<status status="PASS" starttime="20230510 23:26:18.246" endtime="20230510 23:26:18.419"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${Button_Password}</arg>
+<arg>${password3}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230510 23:26:18.426" level="INFO">Typing text '123' into text field '//INPUT[@id='wpPassword2']'.</msg>
+<status status="PASS" starttime="20230510 23:26:18.425" endtime="20230510 23:26:18.567"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${Button_Password2}</arg>
+<arg>${password3}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230510 23:26:18.571" level="INFO">Typing text '123' into text field '//INPUT[@id='wpRetype']'.</msg>
+<status status="PASS" starttime="20230510 23:26:18.570" endtime="20230510 23:26:18.757"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${Button_email}</arg>
+<arg>${email1}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230510 23:26:18.760" level="INFO">Typing text 'john@example.com' into text field '//INPUT[@id='wpEmail']'.</msg>
+<status status="PASS" starttime="20230510 23:26:18.758" endtime="20230510 23:26:18.904"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${Button_RealName}</arg>
+<arg>${name1}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230510 23:26:18.905" level="INFO">Typing text 'Jogdfgdfgdfhn' into text field '//INPUT[@id='wpRealName']'.</msg>
+<status status="PASS" starttime="20230510 23:26:18.904" endtime="20230510 23:26:19.057"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230510 23:26:22.060" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230510 23:26:19.058" endtime="20230510 23:26:22.060"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//LI[text()='The password entered is in a list of very commonly used passwords. Please choose a more unique password.']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230510 23:26:22.060" endtime="20230510 23:26:22.094"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20230510 23:26:22.099" level="INFO">Opening url 'https://rosettacode.org/w/index.php?title=Special:CreateAccount&amp;returnto=Rosetta+Code'</msg>
+<status status="PASS" starttime="20230510 23:26:22.099" endtime="20230510 23:26:22.723"/>
+</kw>
+<status status="PASS" starttime="20230510 23:26:17.656" endtime="20230510 23:26:22.724"/>
+</test>
+<test id="s1-t6" name="Create Account With Simple Password Without clicking On create Button" line="68">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<arg>edge</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230510 23:26:22.736" level="INFO">Using existing browser from index 1.</msg>
+<msg timestamp="20230510 23:26:22.736" level="INFO">Opening url 'https://rosettacode.org/w/index.php?title=Special:CreateAccount&amp;returnto=Rosetta+Code'</msg>
+<status status="PASS" starttime="20230510 23:26:22.735" endtime="20230510 23:26:23.307"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${Button_Username}</arg>
+<arg>${name1}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230510 23:26:23.309" level="INFO">Typing text 'Jogdfgdfgdfhn' into text field '//INPUT[@id='wpName2']'.</msg>
+<status status="PASS" starttime="20230510 23:26:23.308" endtime="20230510 23:26:23.459"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${Button_Password}</arg>
+<arg>${password4}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230510 23:26:23.461" level="INFO">Typing text 'password1' into text field '//INPUT[@id='wpPassword2']'.</msg>
+<status status="PASS" starttime="20230510 23:26:23.459" endtime="20230510 23:26:23.608"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${Button_Password2}</arg>
+<arg>${password4}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230510 23:26:23.610" level="INFO">Typing text 'password1' into text field '//INPUT[@id='wpRetype']'.</msg>
+<status status="PASS" starttime="20230510 23:26:23.608" endtime="20230510 23:26:23.752"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${Button_email}</arg>
+<arg>${email1}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230510 23:26:23.753" level="INFO">Typing text 'john@example.com' into text field '//INPUT[@id='wpEmail']'.</msg>
+<status status="PASS" starttime="20230510 23:26:23.752" endtime="20230510 23:26:23.900"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${Button_RealName}</arg>
+<arg>${name1}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230510 23:26:23.901" level="INFO">Typing text 'Jogdfgdfgdfhn' into text field '//INPUT[@id='wpRealName']'.</msg>
+<status status="PASS" starttime="20230510 23:26:23.900" endtime="20230510 23:26:24.069"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230510 23:26:27.070" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230510 23:26:24.070" endtime="20230510 23:26:27.070"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//DIV[@class='mw-message-box mw-message-box-error'][text()='The password entered is in a list of very commonly used passwords. Please choose a more unique password.']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230510 23:26:27.071" endtime="20230510 23:26:27.105"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20230510 23:26:27.106" level="INFO">Opening url 'https://rosettacode.org/w/index.php?title=Special:CreateAccount&amp;returnto=Rosetta+Code'</msg>
+<status status="PASS" starttime="20230510 23:26:27.106" endtime="20230510 23:26:27.767"/>
+</kw>
+<status status="PASS" starttime="20230510 23:26:22.733" endtime="20230510 23:26:27.768"/>
+</test>
+<test id="s1-t7" name="Create Account With Wrong UserName and Password Without clicking On create Button" line="78">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<arg>edge</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230510 23:26:27.770" level="INFO">Using existing browser from index 1.</msg>
+<msg timestamp="20230510 23:26:27.770" level="INFO">Opening url 'https://rosettacode.org/w/index.php?title=Special:CreateAccount&amp;returnto=Rosetta+Code'</msg>
+<status status="PASS" starttime="20230510 23:26:27.770" endtime="20230510 23:26:28.402"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${Button_Username}</arg>
+<arg>${name3}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230510 23:26:28.404" level="INFO">Typing text 'qwqsqwsqs' into text field '//INPUT[@id='wpName2']'.</msg>
+<status status="PASS" starttime="20230510 23:26:28.403" endtime="20230510 23:26:28.559"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${Button_Password}</arg>
+<arg>${password3}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230510 23:26:28.562" level="INFO">Typing text '123' into text field '//INPUT[@id='wpPassword2']'.</msg>
+<status status="PASS" starttime="20230510 23:26:28.561" endtime="20230510 23:26:28.667"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${Button_Password2}</arg>
+<arg>${password1}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230510 23:26:28.668" level="INFO">Typing text 'password12324' into text field '//INPUT[@id='wpRetype']'.</msg>
+<status status="PASS" starttime="20230510 23:26:28.668" endtime="20230510 23:26:28.799"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${Button_email}</arg>
+<arg>${email1}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230510 23:26:28.800" level="INFO">Typing text 'john@example.com' into text field '//INPUT[@id='wpEmail']'.</msg>
+<status status="PASS" starttime="20230510 23:26:28.799" endtime="20230510 23:26:28.933"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${Button_RealName}</arg>
+<arg>${name1}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230510 23:26:28.934" level="INFO">Typing text 'Jogdfgdfgdfhn' into text field '//INPUT[@id='wpRealName']'.</msg>
+<status status="PASS" starttime="20230510 23:26:28.934" endtime="20230510 23:26:29.091"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230510 23:26:32.094" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230510 23:26:29.092" endtime="20230510 23:26:32.094"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//DIV[@class='mw-message-box mw-message-box-warning']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230510 23:26:32.094" endtime="20230510 23:26:32.115"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//DIV[@class='mw-message-box mw-message-box-error']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230510 23:26:32.116" endtime="20230510 23:26:32.141"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20230510 23:26:32.142" level="INFO">Opening url 'https://rosettacode.org/w/index.php?title=Special:CreateAccount&amp;returnto=Rosetta+Code'</msg>
+<status status="PASS" starttime="20230510 23:26:32.142" endtime="20230510 23:26:32.736"/>
+</kw>
+<status status="PASS" starttime="20230510 23:26:27.769" endtime="20230510 23:26:32.746"/>
+</test>
+<test id="s1-t8" name="Post-conditions" line="89">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230510 23:26:32.749" endtime="20230510 23:26:35.075"/>
+</kw>
+<status status="PASS" starttime="20230510 23:26:32.748" endtime="20230510 23:26:35.075"/>
+</test>
+<status status="PASS" starttime="20230510 23:25:40.061" endtime="20230510 23:26:35.077"/>
+</suite>
+<statistics>
+<total>
+<stat pass="8" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="8" fail="0" skip="0" id="s1" name="TS02">TS02</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

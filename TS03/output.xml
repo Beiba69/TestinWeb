@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.1 (Python 3.11.3 on win32)" generated="20230511 02:23:30.742" rpa="false" schemaversion="3">
+<suite id="s1" name="TS03" source="C:\Users\BeiBA\PycharmProjects\pythonProject8\TS03\TS03.robot">
+<test id="s1-t1" name="Checking checbox Functionality" line="11">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<arg>edge</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230511 02:23:31.032" level="INFO">Opening browser 'edge' to base url 'https://rosettacode.org/wiki/Rosetta_Code'.</msg>
+<status status="PASS" starttime="20230511 02:23:31.032" endtime="20230511 02:23:34.328"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Button_Checkbox}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230511 02:23:34.330" level="INFO">Clicking element 'xpath=//input[@id='p-personal-checkbox']/self::input'.</msg>
+<status status="PASS" starttime="20230511 02:23:34.329" endtime="20230511 02:23:34.412"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230511 02:23:35.413" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20230511 02:23:34.412" endtime="20230511 02:23:35.413"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>(//P)[1]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230511 02:23:35.413" endtime="20230511 02:23:35.463"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20230511 02:23:35.463" level="INFO">Opening url 'https://rosettacode.org/wiki/Rosetta_Code'</msg>
+<status status="PASS" starttime="20230511 02:23:35.463" endtime="20230511 02:23:35.612"/>
+</kw>
+<status status="PASS" starttime="20230511 02:23:31.032" endtime="20230511 02:23:35.612"/>
+</test>
+<test id="s1-t2" name="Checking Login Button Functionality" line="17">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Button_Checkbox}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230511 02:23:35.612" level="INFO">Clicking element 'xpath=//input[@id='p-personal-checkbox']/self::input'.</msg>
+<status status="PASS" starttime="20230511 02:23:35.612" endtime="20230511 02:23:35.673"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230511 02:23:36.673" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20230511 02:23:35.673" endtime="20230511 02:23:36.673"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Button_Login}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230511 02:23:36.673" level="INFO">Clicking element 'xpath=//SPAN[text()='Log in']/self::SPAN'.</msg>
+<status status="PASS" starttime="20230511 02:23:36.673" endtime="20230511 02:23:37.332"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//BUTTON[@id='wpLoginAttempt']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230511 02:23:37.332" endtime="20230511 02:23:37.362"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20230511 02:23:37.362" level="INFO">Opening url 'https://rosettacode.org/wiki/Rosetta_Code'</msg>
+<status status="PASS" starttime="20230511 02:23:37.362" endtime="20230511 02:23:37.933"/>
+</kw>
+<status status="PASS" starttime="20230511 02:23:35.612" endtime="20230511 02:23:37.933"/>
+</test>
+<test id="s1-t3" name="Try to login with wrong Username" line="23">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL_Login}</arg>
+<arg>${BROWSER}</arg>
+<arg>edge</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230511 02:23:37.942" level="INFO">Using existing browser from index 1.</msg>
+<msg timestamp="20230511 02:23:37.942" level="INFO">Opening url 'https://rosettacode.org/w/index.php?title=Special:UserLogin&amp;returnto=Rosetta+Code'</msg>
+<status status="PASS" starttime="20230511 02:23:37.941" endtime="20230511 02:23:38.457"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${Button_username}</arg>
+<arg>${name3}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230511 02:23:38.458" level="INFO">Typing text 'qwqsqwsqs' into text field '//INPUT[@id='wpName1']'.</msg>
+<status status="PASS" starttime="20230511 02:23:38.457" endtime="20230511 02:23:38.553"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${Button_Password}</arg>
+<arg>${password2}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230511 02:23:38.558" level="INFO">Typing text 'WuB.dZV-9hbzyBd' into text field '//INPUT[@id='wpPassword1']'.</msg>
+<status status="PASS" starttime="20230511 02:23:38.557" endtime="20230511 02:23:38.680"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230511 02:23:40.680" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230511 02:23:38.680" endtime="20230511 02:23:40.680"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>window.scrollTo(0, document.body.scrollHeight);</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20230511 02:23:40.683" level="INFO">Executing JavaScript:
+window.scrollTo(0, document.body.scrollHeight);
+Without any arguments.</msg>
+<status status="PASS" starttime="20230511 02:23:40.680" endtime="20230511 02:23:40.713"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>//BUTTON[@id='wpLoginAttempt']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230511 02:23:40.713" level="INFO">Clicking button '//BUTTON[@id='wpLoginAttempt']'.</msg>
+<status status="PASS" starttime="20230511 02:23:40.713" endtime="20230511 02:23:42.181"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>4</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230511 02:23:46.184" level="INFO">Slept 4 seconds</msg>
+<status status="PASS" starttime="20230511 02:23:42.183" endtime="20230511 02:23:46.185"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//LABEL[@for='wpRemember'][text()='Keep me logged in']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230511 02:23:46.187" endtime="20230511 02:23:46.263"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>window.scrollTo(0, 0);</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20230511 02:23:46.264" level="INFO">Executing JavaScript:
+window.scrollTo(0, 0);
+Without any arguments.</msg>
+<status status="PASS" starttime="20230511 02:23:46.263" endtime="20230511 02:23:46.275"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${URL_login}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20230511 02:23:46.276" level="INFO">Opening url 'https://rosettacode.org/w/index.php?title=Special:UserLogin&amp;returnto=Rosetta+Code'</msg>
+<status status="PASS" starttime="20230511 02:23:46.275" endtime="20230511 02:23:46.808"/>
+</kw>
+<status status="PASS" starttime="20230511 02:23:37.933" endtime="20230511 02:23:46.809"/>
+</test>
+<test id="s1-t4" name="Try to login with wrong Password" line="34">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${Button_username}</arg>
+<arg>${name1}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230511 02:23:46.812" level="INFO">Typing text 'Jogdfgdfgdfhn' into text field '//INPUT[@id='wpName1']'.</msg>
+<status status="PASS" starttime="20230511 02:23:46.811" endtime="20230511 02:23:46.897"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${Button_Password}</arg>
+<arg>${name3}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230511 02:23:46.900" level="INFO">Typing text 'qwqsqwsqs' into text field '//INPUT[@id='wpPassword1']'.</msg>
+<status status="PASS" starttime="20230511 02:23:46.900" endtime="20230511 02:23:46.987"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230511 02:23:48.987" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230511 02:23:46.987" endtime="20230511 02:23:48.987"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>window.scrollTo(0, document.body.scrollHeight);</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20230511 02:23:48.987" level="INFO">Executing JavaScript:
+window.scrollTo(0, document.body.scrollHeight);
+Without any arguments.</msg>
+<status status="PASS" starttime="20230511 02:23:48.987" endtime="20230511 02:23:49.024"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>//BUTTON[@id='wpLoginAttempt']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230511 02:23:49.026" level="INFO">Clicking button '//BUTTON[@id='wpLoginAttempt']'.</msg>
+<status status="PASS" starttime="20230511 02:23:49.025" endtime="20230511 02:23:53.401"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>4</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230511 02:23:57.403" level="INFO">Slept 4 seconds</msg>
+<status status="PASS" starttime="20230511 02:23:53.402" endtime="20230511 02:23:57.403"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>window.scrollTo(0, 0);</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20230511 02:23:57.407" level="INFO">Executing JavaScript:
+window.scrollTo(0, 0);
+Without any arguments.</msg>
+<status status="PASS" starttime="20230511 02:23:57.405" endtime="20230511 02:23:57.430"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//LABEL[@for='wpRemember'][text()='Keep me logged in']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230511 02:23:57.432" endtime="20230511 02:23:57.456"/>
+</kw>
+<status status="PASS" starttime="20230511 02:23:46.810" endtime="20230511 02:23:57.457"/>
+</test>
+<test id="s1-t5" name="Checking learn more link Functionality" line="43">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<arg>edge</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230511 02:23:57.460" level="INFO">Using existing browser from index 1.</msg>
+<msg timestamp="20230511 02:23:57.460" level="INFO">Opening url 'https://rosettacode.org/wiki/Rosetta_Code'</msg>
+<status status="PASS" starttime="20230511 02:23:57.459" endtime="20230511 02:23:58.177"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Button_Checkbox}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230511 02:23:58.177" level="INFO">Clicking element 'xpath=//input[@id='p-personal-checkbox']/self::input'.</msg>
+<status status="PASS" starttime="20230511 02:23:58.177" endtime="20230511 02:23:58.234"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230511 02:23:59.235" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20230511 02:23:58.234" endtime="20230511 02:23:59.235"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Button_LearnMore}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230511 02:23:59.235" level="INFO">Clicking element '//SPAN[text()='learn more']/self::SPAN'.</msg>
+<status status="PASS" starttime="20230511 02:23:59.235" endtime="20230511 02:24:00.210"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//A[@rel='nofollow'][text()='create this page']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230511 02:24:00.210" endtime="20230511 02:24:00.238"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${URL_LearnMore}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20230511 02:24:00.238" level="INFO">Opening url 'https://rosettacode.org/wiki/Help:Introduction'</msg>
+<status status="PASS" starttime="20230511 02:24:00.238" endtime="20230511 02:24:00.652"/>
+</kw>
+<status status="PASS" starttime="20230511 02:23:57.459" endtime="20230511 02:24:00.652"/>
+</test>
+<test id="s1-t6" name="Checking Talk link Functionality" line="50">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Button_Checkbox}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230511 02:24:00.656" level="INFO">Clicking element 'xpath=//input[@id='p-personal-checkbox']/self::input'.</msg>
+<status status="PASS" starttime="20230511 02:24:00.652" endtime="20230511 02:24:00.712"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230511 02:24:01.713" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20230511 02:24:00.712" endtime="20230511 02:24:01.713"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Button_Talk}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230511 02:24:01.713" level="INFO">Clicking element '//SPAN[text()='Talk']/self::SPAN'.</msg>
+<status status="PASS" starttime="20230511 02:24:01.713" endtime="20230511 02:24:02.834"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//SPAN[@class='mw-page-title-namespace'][text()='User talk']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230511 02:24:02.834" endtime="20230511 02:24:02.859"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20230511 02:24:02.860" level="INFO">Opening url 'https://rosettacode.org/wiki/Rosetta_Code'</msg>
+<status status="PASS" starttime="20230511 02:24:02.860" endtime="20230511 02:24:03.444"/>
+</kw>
+<status status="PASS" starttime="20230511 02:24:00.652" endtime="20230511 02:24:03.444"/>
+</test>
+<test id="s1-t7" name="Checking Dark mode link Functionality" line="56">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Button_Checkbox}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230511 02:24:03.444" level="INFO">Clicking element 'xpath=//input[@id='p-personal-checkbox']/self::input'.</msg>
+<status status="PASS" starttime="20230511 02:24:03.444" endtime="20230511 02:24:03.511"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230511 02:24:04.513" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20230511 02:24:03.512" endtime="20230511 02:24:04.513"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Button_Dark}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230511 02:24:04.513" level="INFO">Clicking element '//SPAN[text()='Dark mode']/self::SPAN'.</msg>
+<status status="PASS" starttime="20230511 02:24:04.513" endtime="20230511 02:24:04.618"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Button_Checkbox}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230511 02:24:04.621" level="INFO">Clicking element 'xpath=//input[@id='p-personal-checkbox']/self::input'.</msg>
+<status status="PASS" starttime="20230511 02:24:04.619" endtime="20230511 02:24:04.677"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230511 02:24:06.678" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230511 02:24:04.677" endtime="20230511 02:24:06.678"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>(//SPAN)[13]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230511 02:24:06.678" endtime="20230511 02:24:06.723"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20230511 02:24:06.733" level="INFO">Opening url 'https://rosettacode.org/wiki/Rosetta_Code'</msg>
+<status status="PASS" starttime="20230511 02:24:06.723" endtime="20230511 02:24:07.393"/>
+</kw>
+<status status="PASS" starttime="20230511 02:24:03.444" endtime="20230511 02:24:07.400"/>
+</test>
+<test id="s1-t8" name="Checking Contributions link Functionality" line="65">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Button_Checkbox}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230511 02:24:07.404" level="INFO">Clicking element 'xpath=//input[@id='p-personal-checkbox']/self::input'.</msg>
+<status status="PASS" starttime="20230511 02:24:07.403" endtime="20230511 02:24:07.473"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230511 02:24:08.475" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20230511 02:24:07.474" endtime="20230511 02:24:08.475"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Button_Contributions}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230511 02:24:08.475" level="INFO">Clicking element '//SPAN[text()='Contributions']/self::SPAN'.</msg>
+<status status="PASS" starttime="20230511 02:24:08.475" endtime="20230511 02:24:09.605"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//SPAN[@class='oo-ui-labelElement-label'][text()='Search for contributions']/self::SPAN</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230511 02:24:09.606" endtime="20230511 02:24:09.686"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20230511 02:24:09.687" level="INFO">Opening url 'https://rosettacode.org/wiki/Rosetta_Code'</msg>
+<status status="PASS" starttime="20230511 02:24:09.687" endtime="20230511 02:24:10.252"/>
+</kw>
+<status status="PASS" starttime="20230511 02:24:07.402" endtime="20230511 02:24:10.253"/>
+</test>
+<test id="s1-t9" name="Post-conditions" line="71">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230511 02:24:10.253" endtime="20230511 02:24:12.533"/>
+</kw>
+<status status="PASS" starttime="20230511 02:24:10.253" endtime="20230511 02:24:12.533"/>
+</test>
+<status status="PASS" starttime="20230511 02:23:30.742" endtime="20230511 02:24:12.533"/>
+</suite>
+<statistics>
+<total>
+<stat pass="9" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="9" fail="0" skip="0" id="s1" name="TS03">TS03</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.1 (Python 3.11.3 on win32)" generated="20230511 03:13:06.309" rpa="false" schemaversion="3">
+<suite id="s1" name="TS05" source="C:\Users\BeiBA\PycharmProjects\pythonProject8\TS04\TS05.robot">
+<test id="s1-t1" name="Checking Shortcut Function" line="10">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<arg>edge</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230511 03:13:06.598" level="INFO">Opening browser 'edge' to base url 'https://meta.miraheze.org/wiki/Privacy_Policy'.</msg>
+<status status="PASS" starttime="20230511 03:13:06.598" endtime="20230511 03:13:10.621"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>window.scrollTo(0, document.body.scrollHeight);</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20230511 03:13:10.622" level="INFO">Executing JavaScript:
+window.scrollTo(0, document.body.scrollHeight);
+Without any arguments.</msg>
+<status status="PASS" starttime="20230511 03:13:10.622" endtime="20230511 03:13:10.637"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//BDI[@lang='en'][text()=' Shortcut']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230511 03:13:10.638" level="INFO">Clicking element '//BDI[@lang='en'][text()=' Shortcut']'.</msg>
+<status status="PASS" starttime="20230511 03:13:10.638" endtime="20230511 03:13:11.228"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>4</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230511 03:13:15.229" level="INFO">Slept 4 seconds</msg>
+<status status="PASS" starttime="20230511 03:13:11.228" endtime="20230511 03:13:15.229"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//B[text()='Shortcuts']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230511 03:13:15.229" endtime="20230511 03:13:15.263"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20230511 03:13:15.263" level="INFO">Opening url 'https://meta.miraheze.org/wiki/Privacy_Policy'</msg>
+<status status="PASS" starttime="20230511 03:13:15.263" endtime="20230511 03:13:15.467"/>
+</kw>
+<status status="PASS" starttime="20230511 03:13:06.593" endtime="20230511 03:13:15.468"/>
+</test>
+<test id="s1-t2" name="Changing Language Function" line="18">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>window.scrollTo(0, document.body.scrollHeight);</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20230511 03:13:15.471" level="INFO">Executing JavaScript:
+window.scrollTo(0, document.body.scrollHeight);
+Without any arguments.</msg>
+<status status="PASS" starttime="20230511 03:13:15.470" endtime="20230511 03:13:15.486"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Button_language1}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230511 03:13:15.487" level="INFO">Clicking element '//A[@href='/wiki/Privacy_Policy/gn']'.</msg>
+<status status="PASS" starttime="20230511 03:13:15.486" endtime="20230511 03:13:17.225"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230511 03:13:18.227" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20230511 03:13:17.225" endtime="20230511 03:13:18.227"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Result1}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230511 03:13:18.228" endtime="20230511 03:13:18.318"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20230511 03:13:18.318" level="INFO">Opening url 'https://meta.miraheze.org/wiki/Privacy_Policy'</msg>
+<status status="PASS" starttime="20230511 03:13:18.318" endtime="20230511 03:13:18.756"/>
+</kw>
+<status status="PASS" starttime="20230511 03:13:15.469" endtime="20230511 03:13:18.757"/>
+</test>
+<test id="s1-t3" name="Changing Language to Deustch" line="24">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>window.scrollTo(0, document.body.scrollHeight);</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20230511 03:13:18.761" level="INFO">Executing JavaScript:
+window.scrollTo(0, document.body.scrollHeight);
+Without any arguments.</msg>
+<status status="PASS" starttime="20230511 03:13:18.759" endtime="20230511 03:13:18.768"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Button_language3}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230511 03:13:18.770" level="INFO">Clicking element '//A[@href='/wiki/Privacy_Policy/de'][text()='Deutsch']'.</msg>
+<status status="PASS" starttime="20230511 03:13:18.769" endtime="20230511 03:13:19.802"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230511 03:13:20.803" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20230511 03:13:19.803" endtime="20230511 03:13:20.803"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Result3}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230511 03:13:20.803" endtime="20230511 03:13:20.850"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20230511 03:13:20.850" level="INFO">Opening url 'https://meta.miraheze.org/wiki/Privacy_Policy'</msg>
+<status status="PASS" starttime="20230511 03:13:20.850" endtime="20230511 03:13:20.999"/>
+</kw>
+<status status="PASS" starttime="20230511 03:13:18.758" endtime="20230511 03:13:21.000"/>
+</test>
+<test id="s1-t4" name="Changing Language to Bahasa Indonesia" line="32">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>window.scrollTo(0, document.body.scrollHeight);</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20230511 03:13:21.004" level="INFO">Executing JavaScript:
+window.scrollTo(0, document.body.scrollHeight);
+Without any arguments.</msg>
+<status status="PASS" starttime="20230511 03:13:21.002" endtime="20230511 03:13:21.027"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Button_language2}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230511 03:13:21.028" level="INFO">Clicking element '//A[@href='/wiki/Privacy_Policy/id'][text()='Bahasa Indonesia']'.</msg>
+<status status="PASS" starttime="20230511 03:13:21.028" endtime="20230511 03:13:21.662"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230511 03:13:22.662" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20230511 03:13:21.662" endtime="20230511 03:13:22.662"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Result2}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230511 03:13:22.662" endtime="20230511 03:13:22.688"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20230511 03:13:22.688" level="INFO">Opening url 'https://meta.miraheze.org/wiki/Privacy_Policy'</msg>
+<status status="PASS" starttime="20230511 03:13:22.688" endtime="20230511 03:13:22.843"/>
+</kw>
+<status status="PASS" starttime="20230511 03:13:21.001" endtime="20230511 03:13:22.844"/>
+</test>
+<test id="s1-t5" name="Checking View History page" line="39">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>window.scrollTo(0, document.body.scrollHeight);</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20230511 03:13:22.847" level="INFO">Executing JavaScript:
+window.scrollTo(0, document.body.scrollHeight);
+Without any arguments.</msg>
+<status status="PASS" starttime="20230511 03:13:22.846" endtime="20230511 03:13:22.859"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Button_ViewHistory}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230511 03:13:22.859" level="INFO">Clicking element '(//SPAN)[56]'.</msg>
+<status status="PASS" starttime="20230511 03:13:22.859" endtime="20230511 03:13:23.739"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230511 03:13:24.741" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20230511 03:13:23.740" endtime="20230511 03:13:24.741"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Result4}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230511 03:13:24.741" endtime="20230511 03:13:24.778"/>
+</kw>
+<status status="PASS" starttime="20230511 03:13:22.845" endtime="20230511 03:13:24.789"/>
+</test>
+<test id="s1-t6" name="Try to compare selected revisions" line="44">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>window.scrollTo(0, document.body.scrollHeight);</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20230511 03:13:24.789" level="INFO">Executing JavaScript:
+window.scrollTo(0, document.body.scrollHeight);
+Without any arguments.</msg>
+<status status="PASS" starttime="20230511 03:13:24.789" endtime="20230511 03:13:24.797"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Button_CompareRevisions}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230511 03:13:24.798" level="INFO">Clicking element '(//INPUT[@class='historysubmit mw-history-compareselectedversions-button mw-ui-button webfonts-changed'])[1]'.</msg>
+<status status="PASS" starttime="20230511 03:13:24.798" endtime="20230511 03:13:26.709"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230511 03:13:27.709" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20230511 03:13:26.709" endtime="20230511 03:13:27.709"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>(//DIV)[75]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230511 03:13:27.712" endtime="20230511 03:13:27.749"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${URL_ViewHistory}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20230511 03:13:27.749" level="INFO">Opening url 'https://meta.miraheze.org/w/index.php?title=Privacy_Policy&amp;action=history'</msg>
+<status status="PASS" starttime="20230511 03:13:27.749" endtime="20230511 03:13:27.997"/>
+</kw>
+<status status="PASS" starttime="20230511 03:13:24.789" endtime="20230511 03:13:27.998"/>
+</test>
+<test id="s1-t7" name="Post-conditions" line="50">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230511 03:13:28.000" endtime="20230511 03:13:30.279"/>
+</kw>
+<status status="PASS" starttime="20230511 03:13:27.999" endtime="20230511 03:13:30.279"/>
+</test>
+<status status="PASS" starttime="20230511 03:13:06.309" endtime="20230511 03:13:30.279"/>
+</suite>
+<statistics>
+<total>
+<stat pass="7" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="7" fail="0" skip="0" id="s1" name="TS05">TS05</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
